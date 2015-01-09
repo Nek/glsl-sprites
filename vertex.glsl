@@ -1,5 +1,10 @@
-attribute vec2 position; 
+precision mediump float;
 
-void main() { 
-  gl_Position = vec4(2.0*position-1.0, 0.0, 1.0);
+attribute vec2 position;
+
+varying vec2 vPos;
+
+void main() {
+  gl_Position = vec4(position, 1, 1);
+  vPos = position;
 }
